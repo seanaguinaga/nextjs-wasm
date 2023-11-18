@@ -21,6 +21,6 @@
     "eslint": "8.28.0",
     "eslint-config-next": "13.0.5",
     "typescript": "4.9.3",
-    "wasm-pack": "0.10.3"
+    "wasm-pack": "0.12.1"
   }
 }
