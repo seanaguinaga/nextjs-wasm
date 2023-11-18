@@ -44,7 +44,7 @@ jobs:
           ~/.cargo/git/db/
           ./wasm/target/
         key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
-    - uses: actions/setup-node@v3
+    - uses: actions/setup-node@v4
       with:
         node-version: 16.x
         cache: 'npm'
