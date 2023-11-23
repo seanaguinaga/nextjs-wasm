@@ -1,7 +1,12 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
-import { WASMExample } from '../components/WASMExample'
+import type { NextPage } from "next";
+import dynamic from "next/dynamic";
+import Head from "next/head";
+import { WASMExample } from "../components/WASMExample";
+import styles from "../styles/Home.module.css";
+
+const Automerge = dynamic(() => import("../components/Automerge"), {
+  ssr: false,
+});
 
 const Home: NextPage = () => {
   return (
@@ -18,11 +23,14 @@ const Home: NextPage = () => {
         </h1>
 
         <div className={styles.wasm}>
-          <WASMExample/>
+          <WASMExample />
+        </div>
+        <div className={styles.wasm}>
+          <Automerge />
         </div>
       </main>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
